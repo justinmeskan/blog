@@ -1,0 +1,80 @@
+	{{#section 'head'}}
+		<script src="jquery.js"></script>
+	{{/section}}<h1 style="text-align:center" class="pagefont">InBox</h1>
+
+	<nav id="navbarheadmail">
+		<ul id="ulbottom">
+			<li>
+				<form  method="post" action="/clearmail">
+					<input type="hidden" name="delete" value="{{messages._id}}">
+					<a  class="clearmessages" onclick="clearmessages()">ClearMessages</a>
+					<input id="button" type="submit" value="Clear Your Messages" style="display:none">
+				</form>
+			</li>
+			<li>
+				<a class="clearmessages" href="/mail">SendAnotherMessage</a>
+			</li>
+			<li>
+				<a class="pagefont2 fieldfont clearmessages" href="/profile">UpdateProfile</a>
+			</li>
+			<li>
+				<a class="clearmessages" href="/user-page">Home</a>
+			</li>
+			<li>
+				<a class="pagefont fieldfont clearmessages" href="/logout">Logout</a>
+			</li>
+		</ul>
+	</nav>		
+
+	<div style="text-align:center">
+		<br>
+		<h2 class="pagefont fieldfont inline"> Your Messages Are {{message}}</h2>
+	</div>
+
+	<div id="lastchild">
+		{{#each messages}}
+		{{#if this.mail}}
+		{{#each this.mail}}
+		<div id="postss">
+			{{this}}
+		</div>	
+		{{/each}}
+		{{else}}
+		{{/if}}
+		{{/each}}
+	</div>
+
+	<div>
+		<br><br><br><br><br><br>
+		<br><br><br><br><br><br>
+		<br><br><br><br><br><br>
+		<br><br><br><br><br><br>
+	</div>
+
+	<footer>
+		<nav id="navbarfoot">
+			<ul id="ulbottom">
+				<li>
+					<a class="pagefont fieldfont clearmessages" href="/profile">UpdateProfile</a>
+				</li>
+				<li>	
+					<form id="formmail" method="get" action="/mail">						
+						<a id="gotmail5" class="pagefont fieldfont clearmessages" id="mailboxbutton" onclick="mailbox()">PrivateMessages</a>
+						<button id="mail" type="submit" style="display:none">PrivateMessages</button>
+					</form>
+				</li>
+				<li>
+					<a class="pagefont fieldfont clearmessages" href="/user-page">Home</a>
+				</li>
+				<li>
+					<a class="pagefont fieldfont clearmessages" href="/logout">Logout</a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
+
+
+
+
+
+

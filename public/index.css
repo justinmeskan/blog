@@ -1,0 +1,480 @@
+body{
+	background-image: url(/img/background.png);
+	width:100%;
+	height:100%;
+	border: 4px inset black;
+	border-top:0;
+}
+
+#button{
+	border-radius:5px;
+	color: white;
+	font-weight: bolder;
+	background-color:#B7ADB0;
+}
+
+#button:hover{
+	border-radius:5px;
+	background-color: gold;
+	color:#7C6358;
+}
+
+#maillistbutt{
+	border-radius:5px;
+	color: white;
+	background-color:#806B63;
+	font-size:150%;
+}
+#maillistbutt:hover{
+	border-radius:5px;
+	color:gold;
+}
+
+#post{
+	border-radius:5px;
+	color: white;
+	font-weight: bolder;
+	background-color:#7C6358;
+}
+
+#post:hover{
+	border-radius:5px;
+	background-color: gold;
+	color:#7C6358;
+}
+
+#searchbutt{
+	border-radius:5px;
+	color: white;
+	font-weight: bolder;
+	background-color:#7C6358;
+}
+
+#searchbutt:hover{
+	border-radius:5px;
+	background-color: gold;
+	color:#7C6358;
+}
+
+ul{
+	list-style-type:none;
+}
+
+ul#ulbottom{
+	width:100%;
+	margin-top:5%;
+}
+
+li{
+	display:inline-block;
+	margin-right:3%;
+}
+
+#blogpost{
+	margin:2% 0 0 0;
+}
+
+.changepost{
+	font-size:150%;
+	color:black;
+	text-decoration: none;
+	border:1px solid gold;
+}
+
+.changepost:hover{
+	color:gold;
+	text-decoration: none;
+	border:1px solid black;
+}
+
+#dropimg{
+	font-size:75%;
+	color:rgb(29, 23, 21);
+	text-decoration: none;
+	display:inline;
+
+}
+
+#profilelogo{
+	text-align: center;
+	font-size: 250%;
+}
+
+nav#navbarhead{
+	list-style:none;
+	display:block;
+	margin:4% 0 0 0;
+	text-align:right;
+	margin-right: 5%;
+}
+
+nav#navbarheadmail{
+	text-align:center;
+}
+
+nav#navbarfoot{
+	border-top:2px solid black;
+	list-style:none;
+	display:block;
+	text-align:left;
+	font-size:75%;
+
+}
+
+#loadavatar:hover{
+	color:white;
+	text-decoration: none;
+	background-color:#4A6B44;
+}
+
+#loadavatar{
+	font-size:150%;
+	color:#4A6B44;
+	text-decoration: none;
+	border:2px solid black;
+	background-color:#A92929;
+}
+
+.clearmessages{
+	font-size:150%;
+	color:#FFFFFF;
+	text-decoration: none;
+}
+
+#clearmessagess{
+	font-size:150%;
+	color:rgb(29, 23, 21);
+	text-decoration: none;
+}
+
+#clearmessagesss{
+	font-size:150%;
+	color:#FFFFFF;
+	text-decoration: none;
+	width:20%;
+	margin-left:0;
+}
+
+#clearmessagessss{
+	font-size:150%;
+	color:black;
+	text-decoration: none;
+	width:20%;
+	margin-left:0;
+	margin-left:3%;
+	width:100%;
+}
+
+a.clearmessages{
+	font-size:150%;
+	color:white;
+	text-decoration: none;
+	margin-right:2%;
+
+}
+
+a#clearmessagesbutt{
+	font-size:150%;
+	color:rgb(29, 23, 21);
+	text-decoration: none;
+	margin-right:2%;
+	border:1px solid gold;
+}
+
+a#clearmessagesbutt:hover{
+	font-size:150%;
+	color:gold;
+	text-decoration: none;
+	margin-right:2%;
+	border:1px solid black;
+}
+
+a#clearmessagess{
+	font-size:150%;
+	color:#FFFFFF;
+	text-decoration: none;
+	margin-right:2%;
+}
+
+a#clearmessagess:hover{
+	font-size:150%;
+	color:gold;
+	text-decoration: none;
+	margin-right:2%;
+}
+
+.clearmessages:hover{
+	color:gold;
+	text-decoration: none;
+}
+
+p{
+	color:black;
+}
+
+#checkmailboxa{
+	font-size:150%;
+	color:#A92929;
+	background-color:#1D3822;
+}
+
+#checkmailboxa:hover{
+	color:white;
+	text-decoration: none;
+}
+
+.inline{
+	display:inline;
+}
+
+.log{
+	width:230px;
+}
+
+.well{
+	margin-top:5%;
+	width:30%;
+	margin-left:35%;
+}
+
+.headingfont{
+	font-size: 200%;
+	font-weight: bold;
+}
+
+.pagefont{
+	color:rgba(0, 0, 0, 0.75);
+
+}
+
+.pagefont2{
+	color:rgb(29, 23, 21));
+
+}
+
+#deletepost:hover{
+	color:black;
+}
+
+.borderdelete{
+	border-bottom:1px solid black;
+}
+
+.mailboxitems:hover{
+	color:gold;
+}
+
+.mailboxitems{
+	padding:0 10px 0 10px;
+	color:white;
+	background-color:#B1A6A8;
+}
+
+#dropdownmail{
+	 background-color:rgb(124, 99, 88);
+	
+}
+
+#maindiv{
+	background-color: aliceblue;
+	height:100%;
+
+}
+
+#mymailbox{
+	font-size:200%;
+	color:blue;
+}
+
+#mymailbox:hover{
+	text-decoration: none;
+	color:white;
+}
+
+#mail{
+	margin-bottom: 5px;
+}
+
+#posts{
+	border:2px solid black;
+	border-bottom: none;
+	background-color:rgb(244, 245, 255);
+	background-color:rgba(244, 245, 255, 0.59);
+	padding:0 0 0 5px;
+}
+
+#postss{
+	border:2px solid black;
+	border-bottom: none;
+	background-color:rgb(244, 245, 255);
+	background-color:rgba(244, 245, 255, 0.59);
+	padding:0 0 0 5px;
+}
+
+#lastchild{
+	border-bottom:4px solid black;
+	margin-left:1%;
+	margin-right:1%;
+
+}
+
+ #post :last-child{
+	border-bottom:2px solid black;
+}
+
+#avatarimg{
+	height: 75px;
+	width: 75px;
+
+}
+
+#paglabel{
+	font-size:200%;	
+	color:black;
+	margin-bottom:0;
+}
+
+#pagdiv{
+	text-align:center;
+	font-size:200%;
+}
+
+#pagdiv:hover{
+	text-align:center;
+	font-size:200%;
+	text-decoration: none;
+}
+
+.pagination{
+	color:white;
+	margin-top:0;
+}
+
+.pagination:hover{
+	color:gold;
+	text-decoration:none;
+}
+
+#hiddenavatar{
+	display:none;
+}
+
+div#dropbox{
+	height:75px;
+	width:75px;
+	margin:25%;
+	padding:10% 0 0 10%;
+}
+
+#dropBox{
+	
+	margin:0px;
+	width: 75px;
+	height: 75px;
+	border: 1px solid grey;
+	border-radius: 3px;
+	background:#9BA8A0;
+	background-size:100%;
+	background-repeat:no-repeat;
+
+}
+
+#dropBox div{
+	margin:5px;
+	color:white;
+	font-size: 14px;
+	height:75px;
+	width:75px;
+}
+
+.postcomment{
+	padding-bottom:1%;
+}
+
+.postimg{
+	padding-top:1%;
+}
+
+#googlepic{
+	align-self:   center;	
+}
+
+h1#title.container{
+	margin:0 0 0 0;
+	text-align: center;
+}
+
+div#title.container{
+	margin:0 0 0 0;
+	width:100%;
+}
+
+div#title{
+	text-align: center;
+	border-top:4px solid black;
+}
+
+#secondtitle{
+	text-align: center;
+}
+
+#frmUserProfile{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

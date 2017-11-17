@@ -1,0 +1,142 @@
+
+	{{#section 'head'}}
+	    <script src="jquery.js"></script>
+	    <script id="userPostTemplate" type="text/x-handlebars-template">
+	     \{{#each posts}}
+			<div id="posts" data-name="\{{this.name}}" data-postid="\{{this._id}}">
+				<img class="postimg" id="avatarimg" data-name="\{{this.name}}" src="\{{this.avatar}}">
+				<p  class="pagefont2" >\{{this.createdOn}}: 
+					<b class="cname">\{{this.name}}</b><br>
+						\{{#each this.post}}
+						\{{this}}<br><br>
+						\{{/each}}
+				</p>
+				<p  class="pagefont2">
+					\{{#each this.comments}}
+					\{{this}}<br>
+		\{{/each}}
+			</p>
+			<form class="postcomment" method="post" action="/update">
+				<input type="text" name="update" value="">
+				<input type="hidden" name="id" value="\{{this._id}}">
+				<input type="hidden" name="name" value="\{{this.name}}">
+				<input id="button" type="submit" value="Comment">
+			</form>					
+		</div>
+			\{{else}}
+		<p> ...</p>
+			\{{/each}}
+		</script>
+	{{/section}}
+
+	<h1 style="text-align:center" class="pagefont">HomePage</h1>
+
+	<nav id="navbarhead">
+		<ul id="ulbottom">
+			<li>
+				<a class="pagefont2 fieldfont clearmessages" href="/profile">UpdateProfile</a>
+			</li>
+			<li>
+				<form id="formmail" method="get" action="/mail">						
+					<a id="gotmail" class="pagefont2 fieldfont clearmessages" id="mailboxbutton" onclick="mailbox()">PrivateMessages</a>
+					<button id="mail" type="submit" style="display:none">MailBox</button>
+				</form>
+			</li>
+			<li>
+				<a class="pagefont2 fieldfont clearmessages" href="/logout">Logout</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="container-fluid">	
+		<p id="blogcap" class="pagefont2 fieldfont headingfont inline">{{name}} <p>
+		<div id="blogDiv"></div>
+		
+		<form class="inline" id="blogform" method="post" action="/user">						
+			<input  class="pagefont2" type="hidden" id="postnameinput" name="name" value="{{name}}">
+			<br>
+			<label style="color:black" class="pagefont2 fieldfont" for="post" >Post A Message</label>
+			<br>
+			<input id="postinputbox" type="text" id="postinput" name="post"  placeholder="Message">
+			<button id="post" type="submit">Post</button>
+			<div style="height:22px"></div>
+		</form>
+		
+		<form class="inline" id="blogSearch" method="post" action="/blogSearch">						
+			<label for="searchbutt" style="color:black"  class="pagefont2 fieldfont" for="search">Search For A Persons Messages</label>
+			<br>
+			<input type="text" id="search" name="search" placeholder="Name">
+			<button id="searchbutt" type="submit">Search</button>
+			<br>
+		</form>
+
+		<div>
+		</div>
+
+		<div id="blogpost">
+			{{#each posts}}
+			      <div id="posts" data-name="{{this.name}}" data-postid="{{this._id}}">
+			        <img class="postimg" id="avatarimg" data-name="{{this.name}}" src="{{this.avatar}}">
+			        <p  class="pagefont2" >{{this.createdOn}}: 
+			          <b class="cname">{{this.name}}</b><br>
+			            {{#each this.post}}
+			            {{this}}<br><br>
+			            {{/each}}
+			        </p>
+			        <p  class="pagefont2">
+			          {{#each this.comments}}
+			          {{this}}<br>
+			          {{/each}}
+			        </p>
+			        <form id="postComment" class="postcomment" method="post" action="/update">
+			          <input type="text" name="update" id="update" value="">
+			          <input type="hidden" name="id" value="{{this._id}}">
+			          <input type="hidden" name="name" value="{{this.name}}">
+			          <input id="button" type="submit" value="Comment">
+			        </form>         
+			      </div>
+			        {{else}}
+			      <p> ...</p>
+			{{/each}}
+
+		</div>
+
+		<div id="pagdiv"><p id="padlabel">View The Next 5 Results</p>
+			{{#each count}}
+			<a class="pagination" href="?page={{this}}">{{this}}</a>
+			{{/each}}
+		</div>
+
+		<footer>
+			<nav id="navbarfoot">
+				<ul id="ulbottom">
+					<li>
+						<a class="pagefont fieldfont clearmessages" href="/profile">UpdateProfile</a>
+					</li>
+					<li>
+						<form id="formmail" method="get" action="/mail">						
+							<a id="gotmail2" class="pagefont fieldfont clearmessages" id="mailboxbutton" onclick="mailbox()">PrivateMessages</a>
+							<button id="mail" type="submit" style="display:none">PrivateMessages</button>
+						</form>
+					</li>
+					<li>
+						<a class="pagefont fieldfont clearmessages" href="/logout">Logout</a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

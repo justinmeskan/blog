@@ -1,0 +1,71 @@
+	{{#section 'head'}}
+    	<script src="jquery.js"></script>
+	{{/section}}
+	
+	<h1 style="text-align:center" class="pagefont">PrivateMessages</h1>
+	
+	<nav id="navbarheadmail">
+		<ul id="ulbottom">
+			<li>
+				<div class="btn-group">
+			 		<button id="maillistbutt" class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Recipient</button>
+		  			<div id="dropdownmail" class="dropdown-menu">
+		    			{{#each mail}}
+	    				<form id="mailitem" method="post" action="/postmenu">						
+							<input  type="hidden" id="id" name="id" value="{{this._id}}">
+								<div class="mailboxitems" id="post" onclick="submit('{{this._id}}');">
+									{{this.local.name}}
+								</div>
+							<button id="{{this._id}}" type="submit" style="display:none"></button>
+						</form>					
+						{{/each}}
+		  			</div>
+				</div>
+			</li>
+			<li>
+				<form id="formmail" method="post" action="/checkmail">						
+					<input  type="hidden" id="id" name="id" value="{{userID}}">
+					<a id="gotmail" class="clearmessages" onclick="checkmailbox()">CheckMyInBox</a>
+					<button id="checkmailbox" type="submit" style="display:none">CheckMailBox</button>
+				</form>
+			<li>
+				<a class="pagefont fieldfont inline clearmessages" href="/profile">UpdateProfile</a>
+			</li>
+			<li>
+				<a class="pagefont fieldfont inline clearmessages" href="/user-page">Home</a>
+			</li>
+			<li>
+				<a class="pagefont fieldfont clearmessages" href="/logout">Logout</a>
+			</li>
+		</ul>
+	</nav>
+	
+	<div>
+		<br><br><br><br><br>
+		<br><br><br><br><br>
+		<br><br><br><br><br>
+		<br><br><br><br><br>
+		<br><br><br><br><br>
+		<br><br><br><br><br>
+	</div>
+	
+	<footer>
+		<nav id="navbarfoot">
+			<ul id="ulbottom">
+				<li>
+					<a class="pagefont fieldfont clearmessages" href="/profile">UpdateProfile</a>
+				</li>
+				<li>
+					<a class="pagefont fieldfont clearmessages" href="/user-page">Home</a>
+				</li>
+				<li>
+					<a class="pagefont fieldfont clearmessages" href="/logout">Logout</a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
+
+
+
+
+

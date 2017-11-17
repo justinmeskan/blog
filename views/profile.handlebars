@@ -1,0 +1,120 @@
+    {{#section 'head'}}
+        <script src="jquery.js"></script>
+    {{/section}}
+
+    <div class="container-fluid">
+        <h1 style="text-align:center" class="pagefont">UpdateProfile</h1>
+        <nav id="navbarheadmail">
+            <ul id="ulbottom">
+                <li>
+                    <form id="formmail" method="get" action="/mail">                        
+                    <a id="gotmail" class="pagefont2 fieldfont clearmessages" id="mailboxbutton" onclick="mailbox()">PrivateMessages</a>
+                    <button id="mail" type="submit" style="display:none">MailBox</button>
+                    </form>
+                </li>
+                <li>
+                    <a class="clearmessages" href="/user-page">Home</a>
+                </li>
+                <li>
+                    <a class="pagefont2 fieldfont clearmessages" href="/logout">Logout</a>
+                </li>
+                <br>
+            </ul>
+        </nav>
+
+        <div class="row">
+            <div id='profilemain' style="text-align:center">
+                <div class="col-sm-12">
+                    <div class="well">
+                        <strong id="capname" class="clearmessagess" style="font-size:150%">
+                            {{user.local.name}}
+                        </strong>
+                        <b style="font-size:150%">'s Profile Page</b>
+                        <br>
+                        <h3 id="dropimg">
+                            <p>Drag & Drop Img Below</p>
+                            <br>
+                            <p>and Click Load Avatar</p>
+                        </h3>
+                        <div id="centerme">
+                            <div id="dropBox" style="display:inline-block">
+                                <div> 
+                                </div>
+                            </div>
+                            <form id="avatar" method="post" action="/avatar">                       
+                                <input  type="text" id="hiddenavatar" name="hiddenavatar" value="">
+                                <input  type="hidden" id="id" name="id" value="{{userID}}">
+                                <a class="changepost" onclick="avatar()">Load Avatar</a>
+                                <button  class="pagefont" id="avatarpost" type="submit" style="display:none"></button>
+                            </form>
+                            <p>Your Current Avatar Is:</p>
+                            <img id="avatarimg" dataname="{{user.name}}" src="{{user.avatar}}" style="margin-left:0%">
+                            <br>                
+                        </div>         
+                    </div>
+                    <div id="profilecontrols">
+                        <p>To Change One Of Your Posts, Choose And Send</p>
+                        {{#each post}}
+                        <form method="post" action="/postupdate" class="inline"> 
+                            <p style="background-color:#E97E32" class="inline">Your Post Is : {{this.post}}</p>
+                            <br>
+                            <input type="hidden" name="id" value="{{this._id}}">
+                            <a class="changepost" onclick="changepost()">Change Me</a>
+                            <input type="text" name="input">
+                            <input class="changepost" id="changepost" type="submit" style="display:none" value="{{this.post}}">
+                        </form>
+                        <form class="borderdelete inline" method="post" action="/delete">
+                            <input type="hidden" name="deleted" value="{{this._id}}">
+                            <input type="hidden" name="name" value="{{this.name}}">
+                            <div class="changepost inline" onclick="removepost('{{this._id}}')">
+                                Delete
+                            </div>
+                            <hr>
+                            <br>
+                            <br>
+                            <button id="{{this._id}}" type="submit" style="display:none" value="Delete"></button>
+                        </form>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <br><br><br><br><br><br>
+            <br><br><br><br><br><br>
+            <br><br><br><br><br><br>
+        </div>
+    </div>
+
+    <footer>
+        <nav id="navbarfoot">
+            <ul id="ulbottom">
+                <li>
+                    <a class="pagefont fieldfont clearmessages" href="/user-page">Home</a>
+                </li>
+                <li>    
+                    <form id="formmail" method="get" action="/mail">                        
+                        <a id="gotmailprof" class="pagefont fieldfont clearmessages" id="mailboxbutton" onclick="mailbox()">PrivateMessages</a>
+                        <button id="mail" type="submit" style="display:none">PrivateMessages</button>
+                    </form>
+                </li>
+                <li>
+                <a class="pagefont fieldfont clearmessages" href="/logout">Logout</a>
+                </li>
+            </ul>
+        </nav>
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

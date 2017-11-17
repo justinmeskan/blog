@@ -1,0 +1,76 @@
+	{{#section 'head'}}
+		<script src="jquery.js"></script>
+	{{/section}}
+
+	<h1 class="pagefont" style="text-align: center">Thank You</h1>
+
+	<h1 class="pagefont" style="text-align: center">Message Sent</h1>
+
+	<nav id="navbarheadmail">
+		<ul id="ulbottom">
+			<li>
+				<a class="clearmessages" href="/mail">PrivateMessages</a>
+			</li>
+			<li>
+				<form id="formmail" method="post" action="/checkmail">						
+					<input  type="hidden" id="id" name="id" value="{{userID}}">
+					<a id="gotmail" class="clearmessages" onclick="checkmailbox()">CheckMyInBox</a>
+					<button id="checkmailbox" type="submit" style="display:none">CheckMailBox</button>
+				</form>
+			</li>
+			<li>
+				<a class="clearmessages" href="/user-page">Home</a>
+			</li>
+			<li>
+				<a class="clearmessages" href="/profile">UpdateProfile</a>
+			</li>
+			<li>
+				<a class="clearmessages" href="/user-page">Home</a>
+			</li>
+		</ul>
+	</nav>
+
+	<br><br>
+
+	<div>
+		<br><br><br><br><br>
+		<br><br><br><br><br>
+		<br><br><br><br><br>
+		<br><br><br><br><br>
+		<br><br><br><br><br>
+		<br><br><br><br><br>
+	</div>
+
+	<footer>
+		<nav id="navbarfoot">
+			<ul id="ulbottom">
+				<li>
+					<a class="pagefont fieldfont clearmessages" href="/profile">UpdateProfile</a>
+				</li>
+				<li>	
+					<form id="formmail" method="get" action="/mail">						
+						<a id="gotmail6" class="pagefont fieldfont clearmessages" id="mailboxbutton" onclick="mailbox()">PrivateMessages</a>
+						<button id="mail" type="submit" style="display:none">PrivateMessages</button>
+					</form>
+				</li>
+				<li>
+					<a class="pagefont fieldfont clearmessages" href="/logout">Logout</a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

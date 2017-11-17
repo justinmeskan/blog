@@ -1,0 +1,94 @@
+{
+  "name"                              : "Justin",
+  "description"                       : "node.js basic auth parser",
+  "version"                           : "1.0.4",
+  "license"                           : "MIT",
+  "keywords"                          : [
+    "basic",
+    "auth",
+    "authorization",
+    "basicauth"
+                                        ],
+  "repository"                        : {
+    "type"                            : "git",
+    "url"                             : "git+https://github.com/jshttp/basic-auth.git"
+                                        },
+  "devDependencies"                   : {
+    "istanbul"                        : "0.4.3",
+    "mocha"                           : "1.21.5"
+                                        },
+  "files"                             : [
+    "HISTORY.md",
+    "LICENSE",
+    "index.js"
+                                        ],
+  "engines"                           : {
+    "node"                            : ">= 0.6"
+                                        },
+  "scripts"                           : {
+    "test"                            : "mocha --check-leaks --reporter spec --bail",
+    "test-cov"                        : "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
+    "test-travis"                     : "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/",
+    "start"                           : "node server.js"
+                                        },
+  "bugs"                              : {
+    "url"                             : "https://github.com/jshttp/basic-auth/issues"
+                                        },
+  "homepage"                          : "https://github.com/jshttp/basic-auth#readme",
+  "_shasum"                           : "030935b01de7c9b94a824b29f3fccb750d3a5290",
+  "_from"                             : "basic-auth@>=1.0.3 <1.1.0",
+  "_npmVersion"                       : "2.15.1",
+  "_nodeVersion"                      : "4.4.3",
+  "_npmUser"                          : {
+    "name"                            : "dougwilson",
+    "email"                           : "doug@somethingdoug.com"
+                                        },
+  "dist"                              : {
+    "shasum"                          : "030935b01de7c9b94a824b29f3fccb750d3a5290",
+    "tarball"                         : "https://registry.npmjs.org/basic-auth/-/basic-auth-1.0.4.tgz"
+                                        },
+  "maintainers"                       : [
+                                        "dougwilson <doug@somethingdoug.com>",
+                                        "jonathanong <jonathanrichardong@gmail.com>",
+                                        "jongleberry <jonathanrichardong@gmail.com>",
+                                        "tjholowaychuk <tj@vision-media.ca>"
+                                        ],
+  "_npmOperationalInternal"           : {
+    "host"                            : "packages-16-east.internal.npmjs.com",
+    "tmp"                             : "tmp/basic-auth-1.0.4.tgz_1462938878912_0.717464140150696"
+                                        },
+  "directories"                       : {},
+  "_resolved"                         : "https://registry.npmjs.org/basic-auth/-/basic-auth-1.0.4.tgz",
+  "main"                              : "server.js",
+  "dependencies"                      : {
+    "basic-auth"                      : "^1.0.4",
+    "bcrypt-nodejs"                   : "^0.0.3",
+    "body-parser"                     : "^1.15.0",
+    "connect-flash"                   : "^0.1.1",
+    "connect-mongo"                   : "^1.2.0",
+    "cookie-parser"                   : "^1.4.1",
+    "cookie-session"                  : "^1.2.0",
+    "express"                         : "^4.13.4",
+    "express-session"                 : "^1.11.3",
+    "express3-handlebars"             : "^0.5.2",
+    "formidable"                      : "^1.0.17",
+    "mongoose"                        : "^4.4.16",
+    "morgan"                          : "^1.7.0",
+    "mongodb"                         : "^2.1.18",
+    "node-inspector"                  : "^0.12.8",
+    "nodemon"                         : "^1.9.2",
+    "on-headers"                      : "^1.0.1",
+    "passport"                        : "^0.3.2",
+    "passport-facebook"               : "^2.1.1",
+    "passport-google-oauth"           : "^1.0.0",
+    "passport-http"                   : "^0.3.0",
+    "passport-http-bearer"            : "^1.0.1",
+    "passport-local"                  : "^1.0.0",
+    "passport-oauth2-client-password" : "^0.1.2",
+    "passport-twitter"                : "^1.0.4",
+    "password-hash"                   : "^1.2.2",
+    "session-mongoose"                : "^0.5.2"
+                                        },
+  "author"                            : "Justin Meskan"
+}
+

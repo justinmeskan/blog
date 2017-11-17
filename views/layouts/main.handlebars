@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<header></header>
+	<title>Justin's BLOG</title>
+		{{{_sections.head}}}
+	</head>
+	<body> 
+		<div id="secretnumber" style="display:none">
+			{{numpost}}
+		</div>      
+    	<div class="container pagefont" id="title">
+    		<h1>Code.7370 Blog</h1>
+			<h1 id="title" class="pagefont">Ask Your Friends For Help</h1>
+	    </div>
+		{{{_sections.jquery}}}
+		{{{body}}}
+		<link rel="stylesheet" href="bootstrap.css">
+		<link rel="stylesheet" href="index.css">
+		<script type="text/javascript">
+			var userID = "{{userID}}",yourName = "{{name}}",avatar = "{{avatar}}";
+		</script>
+		<script src="bootstrap.js"></script>
+		<script src="theserver.js"></script>
+		<script src="pagination.min.js"></script>
+		<script src="handlebars-v4.0.5.js"></script>
+	</body>
+</html>
